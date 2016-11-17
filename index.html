@@ -11,16 +11,10 @@
 </head>
 
 <body>
+						<h1><center> <font>Todos</font>
+              </center>
+            </h1>
 
-	<div class="text-center">
-		<em>
-				<font color="#ff4d4d">
-						<font size="65%">
-								<font face="Comic Sans MS">Todos</font>
-						</font>
-				</font>
-			</em>
-	</div>
 
 	<div class="container">
 		<div ng-controller="addTodo">
@@ -28,7 +22,6 @@
 				<form ng-submit="save()">
 					<input type="text" class="form-control" name="newtodo" ng-model="newtodo" placeholder="What need to be done?" autocomplete="off" autofocus>
 					<div class="text-center">
-						<br><button type="button" class="btn btn-success" ng-click="save()">Submit</button>
 					</div>
 				</form>
 			</div>
@@ -37,17 +30,16 @@
 
 	<div class="container">
 		<div ng-controller="listTodo">
-			<div class="col-md-12">
+
 				<table class="table table-hover">
 					<thead>
-						<tr class="success">
+						<tr>
 							<th>Checkbox</th>
 							<th>Title</th>
 							<th>Done</th>
 							<th></th>
 						</tr>
 					</thead>
-					<div class="col-md-12">
 						<tbody>
 							<tr ng-repeat="contact in contacts">
 								<br>
@@ -55,14 +47,10 @@
 								<td>{{ contact.title }}</td>
 								<td>
 									<div ng-if="done">complete</div>
-
 								</td>
-								<td><button type="button" class="btn btn-danger" ng-clik="remove()">Delete</button></td>
 							</tr>
 						</tbody>
-					</div>
 				</table>
-			</div>
 		</div>
 	</div>
 
